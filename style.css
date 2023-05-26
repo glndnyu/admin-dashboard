@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.container > * {
+  border: 1px solid blue;
+}
+
+.sidebar {
+  flex: 1 0 0;
+  display: grid;
+
+}
+
+.dashboard {
+  padding: 1rem;
+}
+
+h1{
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  gap: 1.5rem;
+}
+
+svg {
+  width: 3rem;
+}
+
+.menu, .setting {
+  padding: 2.5rem;
+}
+
+.menu nav,
+.setting nav {
+  display: grid;
+  gap: 2rem;
+}
+
+.menu a,
+.setting a {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.menu a:visited,
+.setting a:visited {
+  color: inherit;
+}
+
+.menu a:hover,
+.setting a:hover{
+  transition: all 0.15s ease-out;
+  transform: scale(1.05);
+}
+
+.menu svg,
+.setting svg{
+  width: 1.75rem;
+  height: auto;
+}
+
+.main {
+  flex: 3;
+  display: grid;
+}
