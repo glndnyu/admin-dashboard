@@ -16,9 +16,9 @@ body {
 }
 
 .sidebar {
-  flex: 1 0 0;
+  flex-shrink: 0;
   display: grid;
-
+  width: 360px;
 }
 
 .dashboard {
@@ -47,7 +47,7 @@ svg {
 }
 
 .menu a,
-.setting a {
+.setting a{
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -74,5 +74,44 @@ svg {
 
 .main {
   flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
   display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.header > * {
+  border: 1px solid orange;
+}
+
+.header svg {
+  width: 1.5rem;
+}
+
+.content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.content > * {
+  border: 1px solid tomato;
+}
+
+.projects {
+  grid-row: 1 / 3;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 300px;
+  padding: 2rem;
+}
+
+.cards > * {
+  border: 1px solid white;
 }
