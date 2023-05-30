@@ -136,6 +136,10 @@ h1{
   align-items: center;
 }
 
+.collapse {
+  display: none;
+}
+
 .topleft > #search {
   width: max(450px, 75%);
   border: none;
@@ -404,6 +408,28 @@ h1{
   }
   .projects {
     grid-area: 1 / 1 / -1 / -1;
+  }
+
+  .topleft {
+    gap: 1rem;
+  }
+  .collapse {
+    display: flex;
+    align-items: center;
+
+  }
+  .collapse span {
+    opacity: 50%;
+    font-size: 2rem;
+  }
+
+  .view {
+    background-color: transparent;
+    border: none;
+  }
+
+  .view:hover {
+    cursor: pointer;
   }
 }
 
