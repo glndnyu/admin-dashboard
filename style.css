@@ -435,7 +435,6 @@ h1{
   }
   .sidebar {
     display: none;
-    height: auto;
   }
   .close {
     display: block;
