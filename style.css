@@ -21,8 +21,9 @@ html {
 
 html, body {
   box-sizing: border-box;
-  max-height: 100vh;
-  max-height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
 }
 
 body {
@@ -55,6 +56,7 @@ span {
   top: 0px;
   height: 100vh;
   height: 100svh;
+  height: 100dvh;
   background-color: var(--sidebar);
 }
 
@@ -433,6 +435,7 @@ h1{
   }
   .sidebar {
     display: none;
+    height: auto;
   }
   .close {
     display: block;
@@ -459,7 +462,7 @@ h1{
 
 @media only screen and (max-width: 850px) {
   .container {
-    min-width: 100%;
+    max-width: 100%;
   }
   .topright {
     display: none;
