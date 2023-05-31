@@ -47,6 +47,7 @@ span {
 /* sidebar css */
 
 .sidebar {
+  display: block;
   grid-area: sidebar;
   width: 320px;
   position: -webkit-sticky;
@@ -75,6 +76,22 @@ h1{
 .dashboard a {
   text-decoration: none;
 }
+
+.close {
+  display: none;
+  background-color: transparent;
+  border: none;
+  opacity: 50%;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.close .material-icons-outlined {
+  font-size: 2rem;
+}
+
 
 .menu, .setting {
   padding: 2rem;
@@ -136,8 +153,19 @@ h1{
   align-items: center;
 }
 
-.collapse {
+.view {
   display: none;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+.view span {
+  opacity: 50%;
+  font-size: 2rem;
+}
+
+.view:hover {
+  cursor: pointer;
 }
 
 .topleft > #search {
@@ -406,6 +434,19 @@ h1{
   .sidebar {
     display: none;
   }
+  .close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .view {
+    display: flex;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
   .projects {
     grid-area: 1 / 1 / -1 / -1;
   }
@@ -413,28 +454,18 @@ h1{
   .topleft {
     gap: 1rem;
   }
-  .collapse {
-    display: flex;
-    align-items: center;
-
-  }
-  .collapse span {
-    opacity: 50%;
-    font-size: 2rem;
-  }
-
-  .view {
-    background-color: transparent;
-    border: none;
-  }
-
-  .view:hover {
-    cursor: pointer;
-  }
+  
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
   .container {
-    grid-template-areas: "header header" "content content";
+    min-width: 850px;
   }
-} */
+  .topright {
+    display: none;
+  }
+  .bottomright {
+    grid-area: 1 / 2 / 2 / -1;
+    gap: 1rem;  
+  }
+}
