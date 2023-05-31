@@ -464,7 +464,7 @@ h1{
 
 @media only screen and (max-width: 850px) {
   .container {
-    width: max(100%, 600px);
+    width: max(100%, 750px);
   }
   .header {
     grid-template-rows: auto auto auto;
